@@ -1,0 +1,263 @@
+@import url("reset.css");
+
+@font-face {
+    font-family: 'Architects Daughter';
+    src: url('../fonts/ArchitectsDaughter-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+/* GLOBAL */
+.header {
+    background: #81a368;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+}
+
+
+.level {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+
+}
+
+.level > li {
+    position: relative;
+}
+
+.level > li:hover .second-level {
+    transform: translateY(0);
+
+}
+
+.level li a {
+    display: block;
+    text-decoration: none;
+    font-weight: 800;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    white-space: nowrap;
+
+}
+
+.second-level {
+    padding-top: 30px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-1000%);
+    transition: transform .6s ease;
+}
+
+.second-level li {
+    background: brown;
+    color: azure;
+    font-family: 'Architects Daughter';
+    padding: 10px 40px;
+}
+
+li {
+    position: relative;
+}
+
+
+.three-level li a {
+    padding: 10px 80px;
+    background: blue;
+    font-family: 'Roboto';
+    color: yellow;
+}
+
+
+.three-level {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transform: translateX(-1000%);
+    transition: transform .6s ease;
+}
+
+.second-level > li:hover .three-level {
+    transform: translateX(0);
+}
+
+.home, .gallery {
+    display: block;
+    padding: 10px 20px 10px 50px;
+    background: #000 url('../images/home.svg') no-repeat 15px 10px/auto 30px;
+}   
+
+.gallery {
+    background: #000 url('../images/gallery.svg') no-repeat 15px 12px/auto 30px;
+}
+
+.arrow-down {
+    padding: 10px 40px 10px 20px;
+    background: #000 url('../images/arrow-down.svg') no-repeat 205px 14px/auto 30px;
+}
+
+.arrow-left {
+    background: url('../images/arrow-left.svg') no-repeat -5px 14px;
+}
+
+/* FOOTER */
+.aside-menu {
+	padding-top: 117.5px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	max-width: 70px;
+	width: 100%;
+	background: rgb(255, 64, 0);
+	overflow: hidden;
+	transition: all .4s linear;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    padding-left: 70px;
+	transition: all .5s linear;
+}
+
+.aside-menu:hover + .wrapper {
+	padding-left: 300px;
+}
+
+.aside-menu:hover {
+	max-width: 300px;
+}
+
+.list {
+	max-width: 300px;
+}
+
+.list li {
+	background: green;
+	margin-bottom: 3px;
+}
+
+.list li a {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	padding: 13px 15px;
+	background: yellow;
+    
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.list li a:hover svg {
+	transform: rotate(45deg) scale(1.55);
+}
+
+.list li span {
+	overflow: hidden;
+	border: 3px solid #000;
+	line-height: 10px;
+	padding: 2px;
+	transform: rotate(-45deg);
+    flex-shrink: 0;
+}
+
+.list li svg {
+	width: 28px;
+	height: 28px;
+	fill: rgb(0, 8, 255);
+	transform: rotate(45deg);
+	transition: all .6s linear;
+}
+
+
+
+.list a {
+	display: block;
+}
+
+.icon {
+	width: 50px;
+	height: 50px;
+	fill: rgb(0, 255, 13);
+	stroke: rgb(255, 0, 123);
+}
+
+
+.footer {
+    margin-top: auto;
+    background-color: #81a368;
+    padding: 20px 0;
+}
+
+.messenger {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    line-height: 10px;
+}
+
+
+
+.telegram, .instagram, .facebook, .github {
+    display: inline-block;
+	padding: 27px;
+    border-radius: 30px;
+}
+
+.telegram {
+    background: #1c08f6 url('../images/telegram.svg') no-repeat center/40px;
+}
+
+.instagram {
+    background: #1c08f6 url('../images/instagram.svg') no-repeat center/40px;
+}
+
+.facebook {
+    background: #1c08f6 url('../images/facebook.svg') no-repeat center/40px;
+}
+
+.github {
+    background: #1c08f6 url('../images/github.svg') no-repeat center/40px;
+}
+
+
